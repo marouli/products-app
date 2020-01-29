@@ -1,0 +1,22 @@
+.container {
+    margin: 0 auto;
+    width: 640px;
+    max-width: 80%;
+}
+
+.list {
+    list-style: none;
+}
+
+.list-item {
+    background-color: white;
+		margin: 16px;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.list-item a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #1c2022;
+}
