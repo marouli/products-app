@@ -26,9 +26,9 @@ const ProductList = () => {
 				<ul className="list">
 						{data.map(item => (
 							<li key={item.title} className="list-item">
-								<img src={item.images[0].thumb} alt={item.title}/>
 								<Link to={item.title}>{item.title}</Link>
 								<p>Price: {item.price}</p>
+								<img src={item.images[0].thumb} alt={item.title}/>
 							</li>
 						))}
 				</ul>
