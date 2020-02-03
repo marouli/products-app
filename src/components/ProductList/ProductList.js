@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import "./ProductList.css";
-import Header from "../Header/Header";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './ProductList.css';
+import Header from '../Header/Header';
 
 const ProductList = () => {
 		const [data, setData] = useState([]);

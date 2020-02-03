@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import "./ProductDetail.css";
-import Carousel from "../Carousel/Carousel";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './ProductDetail.css';
+import Carousel from '../Carousel/Carousel';
+import CommentBox from '../Comment/CommentBox';
 
 
 const ProductDetail = ({match: {params: {title}}}) => {
@@ -35,6 +36,7 @@ const ProductDetail = ({match: {params: {title}}}) => {
 						<Carousel images={data.images.map(image => image.original)}/>
 					}
 				</div>
+		<CommentBox id={data.id}/>
         <Link to="/">Return to List View</Link>
       </div>
     </div>
