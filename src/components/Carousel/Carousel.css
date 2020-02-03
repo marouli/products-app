@@ -1,0 +1,82 @@
+.c-carousel {
+  margin-top: inherit;
+}
+
+.c-carousel-img__container {
+  position: relative;
+  height: 200px;
+  text-align: center;
+}
+
+.c-carousel__img {
+  width: 200px;
+	height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-carousel-btn__container {
+  text-align: center;
+}
+
+.c-carousel-btn--previous,
+.c-carousel-btn--next {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6e7b8a;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 6px;
+}
+
+.c-carousel-btn--previous span,
+.c-carousel-btn--next span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.c-carousel-btn--previous span:before {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.c-carousel-btn--next span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.c-carousel-btn--previous:hover span {
+  padding-left: 25px;
+}
+
+.c-carousel-btn--next:hover span {
+  padding-right: 25px;
+}
+
+.c-carousel-btn--previous:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+.c-carousel-btn--next:hover span:after {
+  opacity: 1;
+  right: 0;
+}

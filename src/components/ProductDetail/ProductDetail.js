@@ -25,19 +25,18 @@ const ProductDetail = ({match: {params: {title}}}) => {
 	}
 	
 	return (
-    <div className="container">
-      <div className="card">
-        <h1>{data.title}</h1>
-				<p>{data.description}</p>
-				<p>{data.specification}</p>
-				<p>Price: {data.price}</p>
-				<div className="img-container">
-					{data.images && 
-						<Carousel images={data.images.map(image => image.original)}/>
-					}
-				</div>
-		<CommentBox id={data.id}/>
-        <Link to="/">Return to List View</Link>
+    <div className="c-detail__container">
+      <Link className="c-detail__link" to="/">Return to List View</Link>
+      <div className="c-detail__card">
+        <h2 className="c-detail__title">{data.title}</h2>
+		    <p className="c-detail__description">{data.description}</p>
+			  <h4 className="c-detail__spec__title">Product Specifications</h4>
+			  <p className="c-detail__spec">{data.specification}</p>
+		    <p className="c-detail__price">€{data.price}</p>
+          {data.images && 
+            <Carousel images={data.images.map(image => image.original)}/>
+          }
+		    <CommentBox id={data.id}/>
       </div>
     </div>
   );
