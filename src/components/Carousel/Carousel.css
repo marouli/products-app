@@ -1,5 +1,5 @@
 .c-carousel {
-  margin-top: inherit;
+  margin-top: 50px;
 }
 
 .c-carousel-img__container {
@@ -9,8 +9,7 @@
 }
 
 .c-carousel__img {
-  width: 200px;
-	height: 200px;
+  height: 170px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,16 +24,16 @@
 .c-carousel-btn--next {
   display: inline-block;
   border-radius: 4px;
-  background-color: #6e7b8a;
+  background-color: #8594a3;
   border: none;
   color: #FFFFFF;
   text-align: center;
   font-size: 12px;
-  padding: 10px;
-  width: 150px;
+  padding: 8px;
+  width: 120px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 6px;
+  margin: 8px;
 }
 
 .c-carousel-btn--previous span,

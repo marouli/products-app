@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import Comment from './Comment';
 import './CommentBox.css';
 
-const CommentBox = () => {
-  const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
+
+const CommentBox = (props) => {
+  const [comments, setComments] = useState(JSON.parse(localStorage.getItem('productID_' + props.id)) || []);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -14,11 +14,12 @@ const CommentBox = () => {
         alert("Please write a comment first!");
         return false;
     }
-      setComment(comment)
-      event.target.reset();
       const newComments = comments.concat([comment]);
       setComments(newComments)
+      localStorage.setItem('productID_' + props.id, JSON.stringify(newComments))
+      event.target.reset();
   }
+
 
   return (
     <div className="c-comment-box">

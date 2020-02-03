@@ -8,12 +8,19 @@
   margin-top: 72px;
   padding: 42px;
   border-radius: 4px;
+  box-shadow: 1px 2px 12px #bec2c5;
 }
 
 .c-detail__link {
   float: right;
-  padding: 10px;
-  padding-right: 15px;
+  padding: 15px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #76b5f3;
+}
+
+.c-detail__link:hover {
+  color: #5b90c5;
 }
 
 .c-detail__title {
@@ -41,19 +48,12 @@
 
 .c-detail__price {
   float: right;
-  margin-right: 18px;
-  padding: 8px 10px 8px 10px;
+  margin-right: 16px;
+  padding: 8px 12px 8px 10px;
   font-size: 22px;
   font-weight: 700;
   color: #fff;
   background-color: #51575d;
   border-radius: 5px;
 }
-
-/* .c-detail__img-container { */
-	/* display: flex; */
-	/* align-items: center;
-	justify-content: center;
-	margin: 32px;
-} */
   

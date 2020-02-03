@@ -26,7 +26,7 @@ const ProductDetail = ({match: {params: {title}}}) => {
 	
 	return (
     <div className="c-detail__container">
-      <Link className="c-detail__link" to="/">Return to List View</Link>
+      <Link className="c-detail__link" to="/">&#8592; Back to Products List</Link>
       <div className="c-detail__card">
         <h2 className="c-detail__title">{data.title}</h2>
 		    <p className="c-detail__description">{data.description}</p>
