@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Carousel.css';
 
 const Carousel = ({images}) => {
-	const [ currentImageIdx, setCurrentImagIdx ] = useState(0);
+	const [currentImageIdx, setCurrentImagIdx] = useState(0);
 
   const prevSlide = () => {
-    // find out whether currentImageIdx eqals 0 and thus user reached beginning of carousel
+    // find out whether currentImageIdx equals 0 and thus user reached beginning of carousel
     const resetToVeryBack = currentImageIdx === 0;
 
     const index = resetToVeryBack ? images.length - 1 : currentImageIdx - 1;

@@ -1,5 +1,5 @@
 .c-comment-box {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .c-comment-list {
@@ -12,8 +12,8 @@
 }
 
 .c-comment-input {
-  width: 500px;
-  padding: 5px;
+  width: 250px;
+  padding: 8px;
 }
 
 .c-comment-input:focus {
@@ -29,50 +29,30 @@
 }
 
 .c-comment-submit-btn {
-  margin-right: 5px;
+  margin-left: 8px;
+  padding: 6px 10px 6px 10px;
+  background: #76b5f3;
+  color: #fff;
+  font-size: 12px;;
+  border: 1px solid #76b5f3;
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow:none;
+}
+
+.c-comment-submit-btn:hover {
+  background: #5b90c5;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  text-shadow:none;
 }
   
 .c-comment-box__header {
   float: left;
   margin-left: 30px;
   margin-bottom: 5px;
-  color: #BBBBBB;
+  color: #bbbbbb;
   font-size: 14px;
   font-weight: 400;
-}
-
-@media screen and (min-width: 426px) {
-  .c-comment-input {
-    margin-left: 20px;
-    width: 70%;
-  }
-  .c-comment-btn__container {
-    margin-left: 18px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .c-comment-input {
-    margin-left: 30px;
-    width: 40%;
-  }
-  .c-comment-btn__container {
-    margin-left: 10px;
-  }
-}
-
-@media screen and (min-width: 1030px) {
-  .c-comment-input {
-    margin: 20px 5px 5px 0;
-    width: 30%;
-  }
-  .c-comment-btn__container {
-    margin-left: 5px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .c-comment-box__header {
-    margin-left: 50px;
-  }
 }

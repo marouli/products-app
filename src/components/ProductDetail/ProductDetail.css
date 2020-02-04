@@ -25,6 +25,7 @@
 
 .c-detail__title {
   margin: 0;
+  color: #5b90c5;
 }
 
 .c-detail__description {
@@ -49,11 +50,10 @@
 .c-detail__price {
   float: right;
   margin-right: 16px;
-  padding: 8px 12px 8px 10px;
+  padding: 6px 10px 6px 10px;
   font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #51575d;
+  color: #5b90c5;
+  border: 1px solid #5b90c5;
   border-radius: 5px;
 }
   

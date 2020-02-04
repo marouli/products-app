@@ -1,7 +1,7 @@
 import React from 'react';
 import './Comment.css';
 
-function Comment(props) {
+const Comment= (props) => {
 
   let data = props.data;
 

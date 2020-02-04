@@ -22,13 +22,13 @@ const ProductList = () => {
     return (
 			<>
 			<Header />
-			<div className="container">
-				<ul className="list">
+			<div className="c-list__container">
+				<ul className="c-list__list">
 						{data.map(item => (
-							<li key={item.title} className="list-item">
+							<li key={item.title} className="c-list__list-item">
 								<Link to={item.title}>{item.title}</Link>
-								<p>Price: {item.price}</p>
-								<img src={item.images[0].thumb} alt={item.title}/>
+								<img className="c-list__list-item__img" src={item.images[0].thumb} alt={item.title}/>
+								<p className="c-list__list-item__price">Price: {item.price}</p>
 							</li>
 						))}
 				</ul>
