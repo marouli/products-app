@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Carousel.css';
 
 const Carousel = ({images}) => {
-	const [currentImageIdx, setCurrentImagIdx] = useState(0);
+  const [currentImageIdx, setCurrentImagIdx] = useState(0);
 
   const prevSlide = () => {
     // find out whether currentImageIdx equals 0 and thus user reached beginning of carousel
@@ -26,7 +26,7 @@ const Carousel = ({images}) => {
   const imageSourcesToDisplay = activeImageSourcesFromState.length < 2
     // append missing images from the beginning of the original array
     ? [...activeImageSourcesFromState, ...images.slice(0, 1 - activeImageSourcesFromState.length) ]
-		: activeImageSourcesFromState;
+    : activeImageSourcesFromState;
 
   return (
     <div className="c-carousel">

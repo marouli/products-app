@@ -14,6 +14,7 @@ const CommentBox = (props) => {
         alert("Please write a comment first!");
         return false;
     }
+
       const newComments = comments.concat([comment]);
       setComments(newComments)
       localStorage.setItem('productID_' + props.id, JSON.stringify(newComments))
@@ -42,8 +43,9 @@ const CommentBox = (props) => {
         {comments.length>1 &&
           <p className="c-comment-box__header">{comments.length} Comments</p>
         }
-        {comments.map(comment =>
+        {comments.map((comment, index) =>
           <Comment
+            key={index}
             data={comment}
           />)}
       </div>
