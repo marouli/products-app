@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ProductDetail.css';
 import Carousel from '../Carousel/Carousel';
 import CommentBox from '../Comment/CommentBox';
-
+import Loader from 'react-loader-spinner';
 
 const ProductDetail = ({match: {params: {title}}}) => {
   const [data, setData] = useState({});
@@ -28,14 +28,24 @@ const ProductDetail = ({match: {params: {title}}}) => {
     fetchData();
 
     return () => { cancel = true }
-    
+
   },[title]);
+
+  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
       
 	return (
     <>
     {isError && <div>Something went wrong ...</div>}
     {isLoading ? (
-      <div>Loading...</div>
+      <div style = {style}>
+        <Loader
+        type="Puff"
+        color="#5b90c5"
+        height={100}
+        width={100}
+        timeout={3000}
+        />
+      </div>
     ) : (
       <div className="c-detail__container">
         <Link className="c-detail__link" to="/">&#8592; Back to Products List</Link>

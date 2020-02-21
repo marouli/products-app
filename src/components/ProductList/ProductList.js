@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
 import Header from '../Header/Header';
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const ProductList = () => {
   const [data, setData] = useState([]);
@@ -29,12 +31,22 @@ const ProductList = () => {
 
   }, []);
 
+  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+
   return (
     <>
     <Header />
     {isError && <div>Something went wrong ...</div>}
     {isLoading ? (
-      <div>Loading...</div>
+      <div style = {style}>
+        <Loader
+        type="Puff"
+        color="#5b90c5"
+        height={80}
+        width={80}
+        timeout={3000}
+        />
+      </div>
     ) : (
       <div className="c-list__container">
         <ul className="c-list__list">
